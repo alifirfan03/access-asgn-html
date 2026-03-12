@@ -1,0 +1,254 @@
+$white: #ffffff;
+$black: #000000;
+$orange: #E67C28;
+$smoke: #f4f4f4;
+$dark-blue: #34495e;
+
+
+
+$container-width: 1200px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: $white;
+
+}
+
+a{
+    text-decoration: none;
+    color: $white;
+}
+ul{
+    list-style: none;
+}
+
+.container{
+    width: $container-width;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+
+.main-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+    color: $white;
+    padding: 10px;
+}
+    .logo img{
+        display: block;
+        width: 120px;
+        height: auto;
+    }
+    
+    .nav-bar li{
+        display: inline-block;
+        margin: 0 15px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .auth-button{
+        display: flex;
+        align-items: center;
+        color: $white;
+        border-radius: 0;
+        a{
+
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .login-btn{
+            
+            background-color: $white;
+            padding: 5px 20px;
+            color: $black;
+
+            &:hover {
+            background-color: darken($white, 5%);
+        }
+        }
+        
+         .register-btn{
+            background-color: $orange;
+            color: $white;
+            padding: 5px 20px;
+
+            &:hover {
+            background-color: darken($orange, 5%);
+        }
+
+        }
+    }
+
+    .hero{
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        background: url('/src/images/hero-bg.jpg') center/cover no-repeat;
+        color: $white;
+        h1{
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+    }
+
+.search-bar {
+
+  padding: 15px 60px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+
+  input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: none;
+    font-size: 1rem;
+  }
+
+  button {
+    background: $orange;
+    color: $white;
+    border: none;
+    padding: 0 40px;
+    border-radius: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.slider-section {
+    background-color: rgba($dark-blue, 0.8);
+    padding: 20px 20px;
+    margin-top: -136px; 
+    position: relative;
+    z-index: 10;
+
+    .card-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    //padding-right: 60px;
+  }
+}
+
+.info-card {
+  text-align: center;
+  color: $white;
+
+  
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    span {
+    font-size: 30px;
+    color: #ffffff;
+  }
+    
+    &.active {
+      background: $white;
+    }
+  }
+}
+
+.latest-jobs {
+  padding: 60px 20x;
+  width: 100%;
+  
+
+  h2 { margin-bottom: 40px; font-size: 2rem; }
+
+  .job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+}
+
+.job-card {
+  background: $orange;
+  color: $white;
+  padding: 30px;
+  border-radius: 2px;
+  transition: transform 0.3s;
+  
+
+  h3 { font-size: 1.1rem; margin-bottom: 10px; height: 3rem; }
+  .job-meta { font-size: 0.8rem; margin-bottom: 15px; opacity: 0.9; }
+  .job-desc { font-size: 0.85rem; margin-bottom: 20px; }
+
+  .btn-apply {
+    background: $white;
+    color: $orange;
+    padding: 5px 15px;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    background: #eeeeee;
+    color: $orange;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+    h3 { color: $orange; }
+    a{
+        background: $orange;
+        color: $orange;}
+
+    }
+
+    .job-meta {
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #fff;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .job-desc{
+        font-size: 18px;
+        color: $dark-blue;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+}
+
+    

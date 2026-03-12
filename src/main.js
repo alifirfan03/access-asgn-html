@@ -1,25 +1,15 @@
-import './style.css'
-import './assets/sass/styles.scss';
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+// 1. Import your SCSS file
+// Vite detects the .scss extension and compiles it automatically
+import './styles.scss';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// 2. Optional: Add global logic (like a scroll effect for your header)
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.main-header');
+  if (window.scrollY > 50) {
+    header.style.background = '#0a0a0a'; // Turns solid "Noir" ink on scroll
+  } else {
+    header.style.background = 'transparent';
+  }
+});
 
-setupCounter(document.querySelector('#counter'))
+console.log('Noir Landing Page Loaded Successfully.');
