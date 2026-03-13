@@ -47,55 +47,101 @@
       </section>
 
       <section class="slider-section">
-        <div class="container">
+        <div class="container flex-between"> 
+          <button class="nav-btn prev" id="prevBtn">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
           <div class="card-wrapper">
-          
-          <div class="info-card">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined">
-                toys_fan
-              </span>
+            
+            <div class="info-card">
+              <div class="icon-circle">
+                <span class="material-symbols-outlined">
+                  toys_fan
+                </span>
+              </div>
+              <p>Eiusmod tempor</p>
             </div>
-            <p>Eiusmod tempor</p>
-          </div>
 
-          <div class="info-card active">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined">
-                toys_fan
-              </span>
+            <div class="info-card active">
+              <div class="icon-circle">
+                <span class="material-symbols-outlined">
+                  toys_fan
+                </span>
+              </div>
+              <p>Eiusmod tempor</p>
             </div>
-            <p>Eiusmod tempor</p>
-          </div>
-          
-          <div class="info-card">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined">
-                toys_fan
-              </span>
+            
+            <div class="info-card">
+              <div class="icon-circle">
+                <span class="material-symbols-outlined">
+                  toys_fan
+                </span>
+              </div>
+              <p>Eiusmod tempor</p>
             </div>
-            <p>Eiusmod tempor</p>
-          </div>
-          <div class="info-card">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined">
-                toys_fan
-              </span>
+            <div class="info-card">
+              <div class="icon-circle">
+                <span class="material-symbols-outlined">
+                  toys_fan
+                </span>
+              </div>
+              <p>Eiusmod tempor</p>
             </div>
-            <p>Eiusmod tempor</p>
-          </div>
-          <div class="info-card">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined">
-                toys_fan
-              </span>
+            <div class="info-card">
+              <div class="icon-circle">
+                <span class="material-symbols-outlined">
+                  toys_fan
+                </span>
+              </div>
+              <p>Eiusmod tempor</p>
             </div>
-            <p>Eiusmod tempor</p>
-          </div>
+            <div class="info-card">
+              <div class="icon-circle">
+                <span class="material-symbols-outlined">
+                  toys_fan
+                </span>
+              </div>
+              <p>Eiusmod tempor</p>
+            </div>
+            <div class="info-card">
+              <div class="icon-circle">
+                <span class="material-symbols-outlined">
+                  toys_fan
+                </span>
+              </div>
+              <p>Eiusmod tempor</p>
+            </div>
+            <div class="info-card">
+              <div class="icon-circle">
+                <span class="material-symbols-outlined">
+                  toys_fan
+                </span>
+              </div>
+              <p>Eiusmod tempor</p>
+            </div>
+            <div class="info-card">
+              <div class="icon-circle">
+                <span class="material-symbols-outlined">
+                  toys_fan
+                </span>
+              </div>
+              <p>Eiusmod tempor</p>
+            </div>
+            <div class="info-card">
+              <div class="icon-circle">
+                <span class="material-symbols-outlined">
+                  toys_fan
+                </span>
+              </div>
+              <p>Eiusmod tempor</p>
+            </div>
 
+          </div>
+          <button class="nav-btn next" id="nextBtn">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
         </div>
-
-        </div>
+        
       </section>
 
       <section class="latest-jobs container">
@@ -140,6 +186,32 @@
         </div>
     </section>
 
+    <section class="about-us">
+      <div class="container text-center">
+        <h2 class="section-title">About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing wqdwq wqdwqdqw dqwd qwd qwdq  elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-item">
+            <span class="number">2000+</span>
+            <span class="number">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut distinctio obcaecati architecto omnis </span>
+          </div>
+          <div class="about-item">
+            <span class="number">2000+</span>
+            <span class="number">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut distinctio obcaecati architecto omnis </span>
+          </div>
+          <div class="about-item">
+            <span class="number">2000+</span>
+            <span class="number">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut distinctio obcaecati architecto omnis </span>
+          </div>
+        </div>
+        <a href="#" class="btn-outline">Read More</a>
+
+      </div>
+    </section>
+
 
 
 
@@ -166,7 +238,39 @@
 
 
 
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
+
+<script>
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const cardWrapper = document.querySelector('.card-wrapper');
+
+  const scrollAmount = 500;
+
+  nextBtn.addEventListener('click', () => {
+    cardWrapper.scrollLeft += scrollAmount;
+  });
+
+  prevBtn.addEventListener('click', () => {
+    cardWrapper.scrollLeft -= scrollAmount;
+  });
+
+  cardWrapper.addEventListener('scroll', () => {
+    const maxScrollLeft = cardWrapper.scrollWidth - cardWrapper.clientWidth;
+    prevBtn.style.opacity = cardWrapper.scrollLeft <= 0 ? "0.3" : "1";
+    nextBtn.style.opacity = cardWrapper.scrollLeft >= maxScrollLeft ? "0.3" : "1";
+  });
+
+</script>
